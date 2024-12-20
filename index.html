@@ -3,46 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ad Soyad ve Telefon</title>
-    <script>
-        // Sayfa yüklendiğinde çalışır
-        window.onload = function() {
-            // LocalStorage'dan verileri al
-            const adSoyad = localStorage.getItem('adSoyad');
-            const telefon = localStorage.getItem('telefon');
-
-            // Eğer veriler varsa inputlara geri yükle
-            if (adSoyad) {
-                document.getElementById('adSoyad').value = adSoyad;
-            }
-            if (telefon) {
-                document.getElementById('telefon').value = telefon;
-            }
-        };
-
-        // Form verilerini kaydetme
-        function kaydet() {
-            const adSoyad = document.getElementById('adSoyad').value;
-            const telefon = document.getElementById('telefon').value;
-
-            // LocalStorage'a kaydet
-            localStorage.setItem('adSoyad', adSoyad);
-            localStorage.setItem('telefon', telefon);
-
-          //  alert('Bilgiler kaydedildi!');
+    <title>Senior Lead Engineer - Fatih Biçer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #f4f4f9;
         }
-    </script>
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background: #007bff;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 10px 0;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: -50px;
+        }
+
+        .profile img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact {
+            margin-top: 20px;
+        }
+
+        .contact a {
+            display: inline-block;
+            margin: 10px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bilgilerinizi Girin</h1>
-    <form onsubmit="event.preventDefault(); kaydet();">
-        <label for="adSoyad">Ad Soyad:</label>
-        <input type="text" id="adSoyad" name="adSoyad" required><br><br>
+    <header>
+        <h1>Fatih Biçer</h1>
+        <h2>Senior Lead Engineer</h2>
+    </header>
 
-        <label for="telefon">Telefon Numarası:</label>
-        <input type="tel" id="telefon" name="telefon" required><br><br>
+    <div class="container">
+        <div class="profile">
+            <img src="IMG.jpg" alt="Fatih Biçer">
+            <p>Welcome to the professional page of Fatih Biçer, Senior Lead Engineer with expertise in engineering solutions, innovation, and leadership.</p>
+        </div>
 
-        <button type="submit">Gönder</button>
-    </form>
+        <div class="contact">
+            <a href="mailto:fatih.bicer@beko.com">E-Mail: fatih.bicer@beko.com</a><br>
+            <a href="https://www.bekocorporate.com/" target="_blank">Visit BEKO Corporate</a><br>
+            <p>WhatsApp: +49 1573 1193599</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Fatih Biçer. All rights reserved. Designed with care.</p>
+    </footer>
 </body>
 </html>
